@@ -5,7 +5,7 @@ CFLAGS?=-O2 -g -Wall
 INSTALL_BIN?=install -s
 PREFIX?=/usr
 
-DOCBOOK2XMAN=docbook2x-man
+DOCBOOK2XMAN=xsltproc --param man.authors.section.enabled 0 http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl
 
 all: $(BINS) $(MANS)
 
